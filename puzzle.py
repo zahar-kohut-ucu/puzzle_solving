@@ -83,9 +83,9 @@ def color_check(board: List[str]) -> bool:
     count = 0
     while count < 5:
         k = 0
-        ind = 0
+        ind = 1
         while k < 5:
-            elem = board[i+k][j+ind]
+            elem = board[i+k][j]
             if elem.isnumeric():
                 if elem not in check_lst:
                     check_lst.append(elem)
@@ -93,7 +93,6 @@ def color_check(board: List[str]) -> bool:
                     return False
             k += 1
         k -= 1
-        ind = 1
         while ind < 5:
             elem = board[i+k][j+ind]
             if elem.isnumeric():
